@@ -1,0 +1,15 @@
+embed_dim: 64
+mlp_layer: [128, 128, 64]
+activation: 'relu'
+dropout: 0.3
+
+sigma: 2
+
+negative_count: 20
+
+weight_decay: 0
+gpu: [8,]
+batch_size: 512
+eval_batch_size: 32
+num_workers: 0
+fmeval: False

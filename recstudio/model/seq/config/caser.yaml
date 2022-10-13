@@ -1,0 +1,8 @@
+embed_dim: 64
+n_v: 4
+n_h: 16
+negative_count: 20
+dropout: 0.3
+weight_decay: 1e-6
+
+batch_size: 1024

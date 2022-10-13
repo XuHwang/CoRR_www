@@ -1,0 +1,23 @@
+embed_dim: 64
+mlp_layer: [128, 128, 64]
+activation: 'relu'
+dropout: 0.3
+
+K: [10, 5]
+negative_count: 20
+alpha: 0.5
+
+independent_epochs: 5
+every_n_epoch_self: 5
+every_n_epoch_tutor: 5
+
+retriever: MF
+ranker: DeepFM
+
+weight_decay: 1e-5
+gpu: 1
+batch_size: 1024
+eval_batch_size: 32
+num_workers: 0
+fmeval: False
+early_stop_patience: 20

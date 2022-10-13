@@ -1,0 +1,10 @@
+activation: relu
+mlp_hidden_size: [128, 64]
+dropout: 0.1
+score_mode: fusion
+
+init_method: normal
+init_range: 0.01
+
+negative_count: 1
+excluding_hist: False

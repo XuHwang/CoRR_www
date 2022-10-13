@@ -1,0 +1,14 @@
+embed_dim: 64
+hidden_size: 128
+num_layer: 1
+num_head: 8
+dropout: 0.2
+activation: leakyrelu
+mlp_layer: [128, 64]
+
+negative_count: 1
+batch_size: 256
+eval_batch_size: 32
+
+test_metrics: [recall, precision, map, ndcg, mrr, hit]
+val_metrics: [ndcg, recall, auc, logloss]

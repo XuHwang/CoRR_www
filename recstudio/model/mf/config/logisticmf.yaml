@@ -1,0 +1,10 @@
+negative_count: 10
+excluding_hist: False
+
+alpha: 0.1
+learner: adagrad
+learning_rate: 0.01
+weight_decay: 0
+
+init_method: normal
+init_range: 0.01

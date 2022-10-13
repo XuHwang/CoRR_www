@@ -1,0 +1,9 @@
+split_mode: user_entry
+
+embed_dim: 64
+
+negative_count: 1
+test_metrics: [recall, auc, logloss]
+cutoff: [10,20]
+fmeval: False
+val_metrics: [auc, logloss]

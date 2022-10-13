@@ -1,0 +1,16 @@
+embed_dim: 200
+dropout_rate: 0.5
+encoder_dims: [64]
+decoder_dims: [64]
+activation: relu
+
+anneal_max: 0.2
+anneal_total_step: 2000000
+
+learning_rate: 0.001
+weight_decay: 1e-5
+learner: adam
+epochs: 200
+batch_size: 256
+eval_batch_size: 200
+negative_count: 1000

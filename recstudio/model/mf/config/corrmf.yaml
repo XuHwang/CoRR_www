@@ -1,0 +1,23 @@
+embed_dim: 64
+mlp_layer: [128, 128, 64]
+activation: 'relu'
+dropout: 0.3
+batch_norm: False
+num_layers: 3
+
+retrieve_method: 'none'
+sampler: 'midx'
+num_neg: [100, 20]
+
+alternating: False
+every_n_epoch_retriever: 5
+every_n_epoch_ranker: 5
+
+retriever: mf # [mf, dssm]
+ranker: deepfm # [deepfm, dcn]
+
+weight_decay: 1e-5
+batch_size: 1024
+eval_batch_size: 32
+num_workers: 0
+fmeval: False

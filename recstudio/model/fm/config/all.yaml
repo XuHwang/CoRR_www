@@ -1,0 +1,5 @@
+fmeval: True
+
+topk_item_step: 100 # used in ranker's topk function to score all items
+val_metrics: [auc, logloss]
+test_metrics: [auc, logloss]

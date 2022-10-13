@@ -1,0 +1,40 @@
+# SASRec
+embed_dim: 64
+hidden_size: 128
+layer_num: 1
+head_num: 2
+dropout_rate: 0.3
+activation: 'gelu'
+
+# Caser
+n_v: 8
+n_h: 16
+dropout: 0.3
+
+# DIN
+din_embed_dim: 128
+attention_mlp: [128, 64]
+fc_mlp: [128, 128, 128]
+din_activation: 'dice'
+din_dropout_rate: 0.3
+din_bn: False
+
+#
+K: [20, 10]
+negative_count: 50
+alpha: 0.5
+
+independent_epochs: 5
+every_n_epoch_self: 5
+every_n_epoch_tutor: 5
+
+retriever: SASRec
+ranker: DIN
+
+init_method: normal
+init_range: 0.01
+
+weight_decay: 5e-5
+batch_size: 512
+eval_batch_size: 32
+num_workers: 1

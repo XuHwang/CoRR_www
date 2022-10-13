@@ -1,0 +1,13 @@
+embed_dim: 64
+activation: dice
+attention_mlp: [128, 64]
+fc_mlp: [128, 64, 64]
+dropout: 0.3
+
+negative_count: 1
+batch_size: 256
+eval_batch_size: 32
+val_n_epoch: 3
+
+test_metrics: [recall, precision, map, ndcg, mrr, hit]
+val_metrics: [ndcg, recall, auc, logloss]

@@ -1,0 +1,42 @@
+url: https://rec.ustc.edu.cn/share/43cc5300-4af1-11ed-89fa-5146abdcc266
+user_id_field: &u user_id:token # TODO: comments for &u and *u
+item_id_field: &i item_id:token
+rating_field: ~
+time_field: &t timestamp:float
+time_format: ~
+
+
+encoding_method: ISO-8859-1
+inter_feat_name: userBehavior.csv
+inter_feat_field: [*u, *i, category:token, *t]
+inter_feat_header: 0
+
+
+user_feat_name: ~
+user_feat_field: [[*u, Gender:token, Age:token, Occupation:token, Zip-code:token]]
+user_feat_header: ~
+
+
+item_feat_name: ~
+item_feat_field: [[*i, Title:token_seq:" ", Genres:token_seq:"|")]]
+item_feat_header: ~
+
+
+use_fields: ~
+field_separator: ","
+min_user_inter: 10
+min_item_inter: 10
+field_max_len: ~
+rating_threshold: ~
+ranker_rating_threshold: 3
+drop_low_rating: ~
+max_seq_len: 20
+
+# network feature, including social network and knowledge graph, the first two fields are remapped the corresponding features
+network_feat_name: ~ #[[social.txt], [ml-100k.kg, ml-100k.link]]
+mapped_feat_field: [*u, *i]
+network_feat_field: [[[source_id:token, target_id:token]], [[head_id:token, tail_id:token, relation_id:token], [*i, entity_id:token]]]
+network_feat_header: [~, ~]
+
+
+save_cache: True # whether to save processed dataset to cache.

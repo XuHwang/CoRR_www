@@ -1,0 +1,21 @@
+# tuners stand for which tuning algorithm to use, more algorithms refer to https://nni.readthedocs.io/zh/stable/hpo/tuners.html
+# [TPE, Random, Grid Search, Anneal, Evolution, SMAC, Batch, HyperBand, Metis, ...]
+tuners: TPE
+
+
+optimize_mode: maximize
+
+
+# If max_trial_number and trial_concurrency are both none, the experiment will not stop
+# until you press Ctrl-C.
+
+# how many trials to run
+max_trial_number: 10
+
+# how many trials to run in parallel
+trial_concurrency: 2
+
+
+# which port to open the web page.
+# By default, the address http://localhost:8888
+port: 8888

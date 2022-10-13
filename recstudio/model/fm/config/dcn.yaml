@@ -1,0 +1,15 @@
+embed_dim: 64
+mlp_layer: [128, 128, 128]
+activation: 'relu'
+num_layers: 3
+dropout: 0.2
+batch_norm: False
+
+val_metrics: [ndcg, recall]
+test_metrics: [recall, precision, map, ndcg, mrr, hit]
+topk: 100
+cutoff: [10, 20, 5, 50]
+negative_count: 20
+eval_batch_size: 64
+topk_item_step: 500 #
+fmeval: False

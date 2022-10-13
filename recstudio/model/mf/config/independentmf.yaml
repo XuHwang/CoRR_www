@@ -1,0 +1,19 @@
+embed_dim: 64
+mlp_layer: [128, 128, 64]
+activation: 'relu'
+dropout: 0.3
+
+negative_count: 3
+
+ranker_negative_count: 3
+
+retriever: mf # [mf, dssm]
+ranker: deepfm # [deepfm, dcn]
+
+weight_decay: 1e-5
+# gpu: [8,]
+batch_size: 1024
+eval_batch_size: 32
+num_workers: 0
+fmeval: False
+early_stop_patience: 10

@@ -1,0 +1,15 @@
+# scorer model
+excluding_hist: False
+scorer_model: PMF
+loss_metric: mse # mae / accuracy
+test_metrics: [recall, precision, map, ndcg, mrr, hit, mse]
+val_metrics: [ndcg, recall, mse]
+
+# propensity model
+propensity_estimation: logistic_regression # naive_bayes
+estimation_model_path: ~
+
+# configuration for LR
+p_learning_rate: 0.01
+
+fmeval: False
